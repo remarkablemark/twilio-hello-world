@@ -4,6 +4,7 @@
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
     "start": "DEBUG=$npm_package_name node server.js",
+    "dev": "DEBUG=$npm_package_name nodemon server.js",
     "send-sms": "DEBUG=$npm_package_name node send-sms.js"
   },
   "dependencies": {
