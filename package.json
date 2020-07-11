@@ -2,5 +2,8 @@
   "name": "twilio-hello-world",
   "version": "1.0.0-alpha",
   "author": "Mark <mark@remarkablemark.org>",
+  "dependencies": {
+    "twilio": "^3.48.0"
+  },
   "license": "MIT"
 }
