@@ -7,6 +7,16 @@ const debug = require('debug')(name);
 const app = express();
 const { MessagingResponse } = twilio.twiml;
 
+/**
+ * GET /
+ */
+app.get('/', (req, res) => {
+  res.send('OK');
+});
+
+/**
+ * POST /sms
+ */
 app.post('/sms', async (req, res) => {
   const twiml = new MessagingResponse();
   twiml.message('Hello, world!');
