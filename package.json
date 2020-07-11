@@ -3,6 +3,7 @@
   "version": "1.0.0-alpha",
   "author": "Mark <mark@remarkablemark.org>",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "twilio": "^3.48.0"
   },
   "license": "MIT"
