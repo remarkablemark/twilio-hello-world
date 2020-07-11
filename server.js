@@ -1,12 +1,9 @@
 const app = require('express')();
 const bodyParser = require('body-parser');
-const { createServer } = require('http');
 const debug = require('debug')(require('./package.json').name);
-const { twiml } = require('twilio');
+const { MessagingResponse } = require('twilio').twiml;
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
-const { MessagingResponse } = twiml;
 
 /**
  * GET /
@@ -28,7 +25,4 @@ app.post('/sms', (req, res) => {
 });
 
 const port = process.env.PORT || 8080;
-
-createServer(app).listen(port, () => {
-  debug(`Express server listening on port ${port}`);
-});
+app.listen(port, () => debug(`Listening on port ${port}`));
