@@ -1,11 +1,12 @@
+const app = require('express')();
+const bodyParser = require('body-parser');
 const { createServer } = require('http');
-const express = require('express');
-const twilio = require('twilio');
-const { name } = require('./package');
-const debug = require('debug')(name);
+const debug = require('debug')(require('./package.json').name);
+const { twiml } = require('twilio');
 
-const app = express();
-const { MessagingResponse } = twilio.twiml;
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const { MessagingResponse } = twiml;
 
 /**
  * GET /
