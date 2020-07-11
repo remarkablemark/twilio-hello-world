@@ -2,9 +2,8 @@
   "name": "twilio-hello-world",
   "version": "1.0.0-alpha",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "index.js",
   "scripts": {
-    "start": "DEBUG=$npm_package_name node index.js"
+    "send-sms": "DEBUG=$npm_package_name node send-sms.js"
   },
   "dependencies": {
     "debug": "^4.1.1",
