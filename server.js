@@ -19,8 +19,10 @@ app.get('/', (req, res) => {
  * POST /sms
  */
 app.post('/sms', async (req, res) => {
+  const { SmsSid, SmsStatus, Body } = req.body;
+  debug(req.body);
   const twiml = new MessagingResponse();
-  twiml.message('Hello, world!');
+  twiml.message(`SID: ${SmsSid}, Status: ${SmsStatus}, Body: ${Body}`);
   res.set('Content-Type', 'text/xml');
   res.end(twiml.toString());
 });
