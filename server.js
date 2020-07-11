@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 /**
  * POST /sms
  */
-app.post('/sms', async (req, res) => {
+app.post('/sms', (req, res) => {
   const { SmsSid, SmsStatus, Body } = req.body;
   debug(req.body);
   const twiml = new MessagingResponse();
